@@ -8,8 +8,58 @@
 // ======== OBJECTS DEFINITIONS ========
 // Define your objects here
 
-
+const dog = {	
+	species:"dog",
+	name:"Rex",
+	gender:"male",
+	legs:4,
+	hands:0,
+	saying:"WOOF!",
+	friends: ["Joey"," Lisa"]
+};
+const cat = {
+	species:"cat",
+	name:"Milka",
+	gender:"female",
+	legs:4,
+	hands:0,
+	saying:"meeeow!",
+	friends: ["Selina"]	
+};
+const man = {
+	species:"human",
+	name:"Joey",
+	gender:"male",
+	legs:2,
+	hands:2,
+	saying:"How you doin'?",
+	friends: ["Rex"," Lisa"]
+};
+const woman = {
+	species:"human",
+	name:"Lisa",
+	gender:"female",
+	legs:2,
+	hands:2,
+	saying:"Hello!",
+	friends: ["Joey"," Rex"," Selina"]
+};
+const catWoman = {
+	species:"cat-woman",
+	name:"Selina",
+	gender:"female",
+	legs:2,
+	hands:2,
+	saying:cat.saying,
+	friends: ["Milka"," Lisa"]
+}
+const inhabitants = [dog, cat, man, woman, catWoman];
+const properties = ["species", "name", "gender", "legs", "hands", "saying", "friends"]
+const formString = inhabitant => {
+	return properties.map(prop=>inhabitant[prop]).join("; ")
+}
 // ======== OUTPUT ========
+inhabitants.forEach(inhabitant => print(formString(inhabitant)));
 /* Use print(message) for output.
    Default tag for message is <pre>. Use print(message,'div') to change containing element tag.
 
@@ -27,5 +77,3 @@
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny');
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny', 'div');
    */
-
-
