@@ -52,12 +52,11 @@ const catWoman = {
 	hands:2,
 	saying:cat.saying,
 	friends: ["Milka"," Lisa"]
-}
+};
 const inhabitants = [dog, cat, man, woman, catWoman];
-const properties = ["species", "name", "gender", "legs", "hands", "saying", "friends"]
-const formString = inhabitant => {
-	return properties.map(prop=>inhabitant[prop]).join("; ")
-}
+const properties = ["species", "name", "gender", "legs", "hands", "saying", "friends"];
+const formString = inhabitant => properties.map(prop=>inhabitant[prop]).join("; ");
+
 // ======== OUTPUT ========
 inhabitants.forEach(inhabitant => print(formString(inhabitant)));
 /* Use print(message) for output.
